@@ -16,7 +16,7 @@ jobs:
           - "3.12"
         exclude:
           - os: macos-14
-            python-version: "3.12"
+            python-version: 3.12
   
     steps:
       - name: Set up Python
@@ -24,6 +24,7 @@ jobs:
         with:
           python-version: '${{ matrix.py-version }}'
         
+
 
 
 
