@@ -11,8 +11,15 @@ jobs:
     runs-on: ${{matrix.os}}
     steps:
     - name: Set up Python
+      if: |
+         !(
+          matrix.os == 'macos-14' &&
+          (matrix.py-version == '3.10')
+          )
+
       uses: actions/setup-python@v5
       with:
         python-version: ${{matrix.py-version}}
         
+
 
